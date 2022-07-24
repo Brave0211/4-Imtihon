@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-oy imtihon</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+      <div class="content-wrapper">
+         <ul class="user"></ul>
+         <ul class="post"></ul>
+         <ul class="comment"></ul>
+     </div>
+    </main>
+    <template class="template-user">
+        <li class="user__item">
+            <span class="user__id"></span>
+            <h3 class="user__name"></h3>
+            <h2 class="user__uname"></h2>
+            <span class="user__city"></span>
+            <span class="user__street"></span>
+            <span class="user__suite"></span>
+            <span class="user__zipcode"></span>
+            <span class="user__title"></span>
+            <span class="user__phrase"></span>
+            <span class="user__bs"></span>
+            <a class="user__phone"></a>
+            <a class="user__email"></a>
+            <a class="user__website" target="_blank"></a>
+            <a class="user__geo" target="_blank"></a>
+        </li>
+    </template>
+    <template class="template-post">
+        <li class="post__item">
+            <h2 class="post__title"></h2>
+            <p class="post__text"></p>
+        </li>  
+    </template>
+    <template class="template-comment">
+        <li class="comment__item">
+            <h2 class="comment__name"></h2>
+            <p class="comment__text"></p>
+            <a class="comment__email" href=""></a>
+        </li>
+    </template>
+    <script src="/js/main.js"></script>
+</body>
+</html>

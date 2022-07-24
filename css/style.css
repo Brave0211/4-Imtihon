@@ -1,0 +1,283 @@
+/* GENERAL */
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.content-wrapper{
+   display: flex;
+   justify-content: center;
+}
+
+ul::-webkit-scrollbar{
+  width: 10px;
+  background-color: #0088ff;
+}
+
+ul::-webkit-scrollbar-thumb{
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background-color: #ffffff;
+  height: 20%;
+}
+
+.user{
+  width: 33%;
+  height: 745px;
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(80, 54, 54);
+  overflow-y: scroll;
+}
+
+.user__item{
+  position: relative;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 3px solid rgb(108, 205, 70);
+}
+
+.user__id{
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 40px;
+}
+
+.user__name {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.user__uname {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.user__street {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.user__suite {
+  display: inline-block;
+  margin-right: 58px;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.user__city {
+  display: inline-block;
+  margin-right: 25px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.user__zipcode {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.user__title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.user__phrase {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.user__bs {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.user__phone {
+  display: block;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: rgb(75, 106, 247);
+}
+
+.user__phone::before{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background-image: url(../img/phone.png);
+  background-size: contain;
+  content: '';
+}
+
+.user__phone:hover{
+  color: rgb(211, 236, 69);
+}
+
+.user__email {
+  display: block;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: #ff1;
+}
+
+.user__email::before{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background-image: url(../img/mail.png);
+  background-size: contain;
+  content: '';
+}
+
+.user__email:hover{
+  color: #f1f;
+}
+
+.user__website {
+  display: inline-block;
+  margin-bottom: 12px;
+  margin-right: 65px;
+  text-decoration: none;
+  color: rgb(255, 200, 0);
+}
+
+.user__website::before{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background-image: url(../img/click.png);
+  background-size: contain;
+  content: '';
+}
+
+.user__website:hover{
+  color: rgb(255, 0, 0);
+}
+
+.user__geo {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(23, 255, 27);
+}
+
+.user__geo::before{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  background-image: url(../img/location.png);
+  background-size: contain;
+  content: '';
+}
+
+.user__geo:hover{
+  color: rgb(0, 204, 255);
+}
+
+.post{
+  display: none;
+  width: 33%;
+  height: 745px;
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(113, 79, 79);
+  overflow-y: scroll;
+}
+
+.post__item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 3px solid rgb(108, 205, 70);
+}
+
+.post__text {
+  color: #000;
+}
+
+.comment{
+  display: none;
+  width: 33%;
+  height: 745px;
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(142, 100, 100);
+  overflow-y: scroll;
+}
+
+.comment__item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 3px solid rgb(108, 205, 70);
+}
+.comment__text {
+  color: #000;
+}
+.comment__email {
+  color: #ff1;
+  text-decoration: none;
+}
+
+.comment__email::before{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background-image: url(../img/mail.png);
+  background-size: contain;
+  content: '';
+}
+
+.comment__email:hover{
+  color: #f1f;
+}
