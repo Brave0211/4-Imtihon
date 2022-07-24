@@ -4,6 +4,7 @@ let elPost = document.querySelector(".post")
 let elPostTemplate = document.querySelector(".template-post").content;
 let elComment = document.querySelector(".comment")
 let elCommentTemplate = document.querySelector( ".template-comment").content;
+let elLoad = document.querySelector(".js-load")
 
 
 let userId = [];
@@ -71,6 +72,7 @@ async function getPost(userId){
 };
 
 elUser.addEventListener("click", (evt) => {
+  elLoad.style.display = "none"
   elPost.style.display = "block"
   if (evt.target.matches(".user__item")) {
     const usersListItemId = evt.target.dataset.id  - 0;
@@ -109,6 +111,7 @@ async function getComment(postId){
   };
   
   elPost.addEventListener("click", (evt) => {
+    elLoad.style.display = "none"
     elComment.style.display = "block"
     if (evt.target.matches(".post__item")) {
       const postsListItemId = evt.target.dataset.id - 0;
